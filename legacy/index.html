@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muzammil — Software Engineer</title>
+  <meta name="description" content="Software engineer building products end to end — web, mobile and AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">muzammil<span class="accent">.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#work">Work</a>
+        <a href="#experience">About</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <span class="mono" id="themeLabel">dark</span>
+        </button>
+        <a class="btn btn-small" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="now-pill"><span class="dot"></span><span class="mono">Now</span> Software Engineer · building with AI</div>
+          <h1>I build the <em>product</em>,<br />not just the feature.</h1>
+          <p class="lead">
+            Software engineer taking ideas from a blank page to production — web, mobile and,
+            lately, agentic AI. I care about the whole thing: the data model, the API, the pixels,
+            and whether anyone actually uses it.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn" href="#work">See the work →</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            <a class="link mono" href="resume.pdf" target="_blank" rel="noopener">résumé.pdf ↓</a>
+          </div>
+          <div class="shipped-at">
+            <span class="mono label">Shipped at</span>
+            <span>Company One</span><span>Company Two</span><span>Company Three</span>
+          </div>
+        </div>
+
+        <div class="terminal reveal" aria-label="Terminal showing shipped projects">
+          <div class="terminal-bar">
+            <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+            <span class="mono terminal-title">~/muzammil — zsh</span>
+          </div>
+          <pre class="terminal-body mono" id="terminal"></pre>
+        </div>
+      </div>
+
+      <div class="container stats reveal">
+        <div class="stat"><strong data-count="5">0</strong><span>yrs shipping</span></div>
+        <div class="stat"><strong data-count="12">0</strong><span>projects owned end-to-end</span></div>
+        <div class="stat"><strong data-count="3" data-suffix="×">0</strong><span>awards</span></div>
+        <div class="stat"><strong data-count="2">0</strong><span>products founded</span></div>
+      </div>
+    </section>
+
+    <!-- 01 WHAT I DO -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">01 / What I do</span>
+          <h2>From blank page to something people actually use</h2>
+          <p>I'm happiest owning a product slice end to end — talking to users, shaping the data model, building the API and polishing the last 10% of the UI.</p>
+        </div>
+        <div class="cards cards-4">
+          <article class="card reveal">
+            <span class="num mono">01</span>
+            <h3>Product engineering</h3>
+            <p>Ideas to production with a focus on clean data models, solid APIs and a polished UI.</p>
+            <span class="tags mono">Next.js · React · TypeScript</span>
+          </article>
+          <article class="card reveal">
+            <span class="num mono">02</span>
+            <h3>Mobile apps</h3>
+            <p>Cross-platform apps from first screen to the stores, plus the release pipeline behind them.</p>
+            <span class="tags mono">React Native · Expo · Firebase</span>
+          </article>
+          <article class="card reveal">
+            <span class="num mono">03</span>
+            <h3>Backend &amp; systems</h3>
+            <p>Services, event pipelines and data models designed to grow without rewrites.</p>
+            <span class="tags mono">Node · Spring Boot · SQL</span>
+          </article>
+          <article class="card card-focus reveal">
+            <span class="num mono">04 <span class="badge">current focus</span></span>
+            <h3>Agentic AI</h3>
+            <p>Agents that plan, call tools and hand off to humans — measurable, observable and trustworthy.</p>
+            <span class="tags mono">MCP · LLM tooling · Evals</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 VENTURES -->
+    <section class="section" id="ventures">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">02 / Ventures</span>
+          <h2>Things I'm building on my own</h2>
+          <p>Products I founded or co-founded — designed, built and shipped.</p>
+        </div>
+        <div class="cards cards-2">
+          <article class="venture reveal">
+            <div class="venture-top">
+              <div class="venture-logo">A</div>
+              <div>
+                <h3>Project Alpha</h3>
+                <span class="mono muted">Web · iOS · Android</span>
+              </div>
+              <span class="badge">Founder</span>
+            </div>
+            <p>A one-line pitch for your product — what it does and who it's for.</p>
+            <div class="venture-links mono">
+              <a href="#" target="_blank" rel="noopener">alpha.com ↗</a>
+              <a href="#" target="_blank" rel="noopener">App Store ↗</a>
+              <a href="#" target="_blank" rel="noopener">Google Play ↗</a>
+            </div>
+          </article>
+          <article class="venture reveal">
+            <div class="venture-top">
+              <div class="venture-logo">B</div>
+              <div>
+                <h3>Project Beta</h3>
+                <span class="mono muted">Web</span>
+              </div>
+              <span class="badge">Co-founder</span>
+            </div>
+            <p>A one-line pitch for your second product — the problem it solves.</p>
+            <div class="venture-links mono">
+              <a href="#" target="_blank" rel="noopener">beta.io ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 SELECTED WORK -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head section-head-row reveal">
+          <div>
+            <span class="eyebrow mono">03 / Selected work</span>
+            <h2>Things I've shipped</h2>
+            <p>Work I've designed, built and carried over the line for teams and clients.</p>
+          </div>
+          <a class="link mono" href="#work">all projects →</a>
+        </div>
+
+        <a class="featured reveal" href="#work">
+          <div class="featured-media">
+            <div class="phone"><div class="phone-screen s1"></div></div>
+            <div class="phone"><div class="phone-screen s2"></div></div>
+            <div class="phone"><div class="phone-screen s3"></div></div>
+          </div>
+          <div class="featured-body">
+            <span class="mono muted"><span class="badge">Featured</span> Mobile app · 2024–26</span>
+            <h3>Flagship Project</h3>
+            <p>Describe your most impressive project: the problem, what you built, and the impact it had on real users.</p>
+            <dl class="meta">
+              <div><dt class="mono">Role</dt><dd>Full-stack developer — mobile, backend</dd></div>
+              <div><dt class="mono">For</dt><dd>Client / Company name</dd></div>
+            </dl>
+            <div class="chips">
+              <span>React Native</span><span>Expo</span><span>Node.js</span><span>PostgreSQL</span>
+            </div>
+            <span class="link mono">Read the case study →</span>
+          </div>
+        </a>
+
+        <div class="cards cards-3">
+          <a class="work-card reveal" href="#work">
+            <div class="work-thumb t1"></div>
+            <span class="mono muted">Agentic AI · 2025</span>
+            <h3>AI Workflow R&amp;D →</h3>
+            <p>A structured way to build full products with AI coding agents.</p>
+          </a>
+          <a class="work-card reveal" href="#work">
+            <div class="work-thumb t2"></div>
+            <span class="mono muted">Research · 2025</span>
+            <h3>Research Project →</h3>
+            <p>A short summary of a research or academic project.</p>
+          </a>
+          <a class="work-card reveal" href="#work">
+            <div class="work-thumb t3"></div>
+            <span class="mono muted">Web app · 2023</span>
+            <h3>Dashboard Platform →</h3>
+            <p>A data-heavy web app made fast with web workers.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head section-head-row reveal">
+          <div>
+            <span class="eyebrow mono">04 / Experience</span>
+            <h2>A few teams, one habit: ship it</h2>
+          </div>
+          <a class="link mono" href="#experience">full timeline →</a>
+        </div>
+
+        <ol class="timeline">
+          <li class="reveal">
+            <div class="tl-company">
+              <div class="tl-logo">C1</div>
+              <div>
+                <h3>Company One <span class="badge">Current</span></h3>
+                <span class="mono muted">Jan 2024 — Present · City · Hybrid</span>
+                <span class="promo mono">↑ 1 promotion</span>
+              </div>
+            </div>
+            <div class="tl-roles">
+              <div class="role">
+                <h4>Senior Software Engineer</h4>
+                <span class="mono muted">Jan 2025 — Present</span>
+                <p>Leading R&amp;D on agentic workflows and owning delivery of core product features.</p>
+              </div>
+              <div class="role">
+                <h4>Software Engineer</h4>
+                <span class="mono muted">Jan 2024 — Jan 2025</span>
+              </div>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="tl-company">
+              <div class="tl-logo">C2</div>
+              <div>
+                <h3>Company Two</h3>
+                <span class="mono muted">Jun 2021 — Dec 2023 · City</span>
+                <span class="promo mono">↑ 2 promotions</span>
+              </div>
+            </div>
+            <div class="tl-roles">
+              <div class="role">
+                <h4>Technical Lead</h4>
+                <span class="mono muted">Jan 2023 — Dec 2023</span>
+                <p>Led the mobile team, mentored developers and owned releases.</p>
+              </div>
+              <div class="role">
+                <h4>Software Development Engineer II</h4>
+                <span class="mono muted">Jun 2022 — Jan 2023</span>
+              </div>
+              <div class="role">
+                <h4>Software Development Engineer I</h4>
+                <span class="mono muted">Jun 2021 — Jun 2022</span>
+              </div>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="tl-company">
+              <div class="tl-logo">C3</div>
+              <div>
+                <h3>Company Three</h3>
+                <span class="mono muted">Jan 2021 — May 2021 · Remote</span>
+              </div>
+            </div>
+            <div class="tl-roles">
+              <div class="role">
+                <h4>Engineering Intern</h4>
+                <span class="mono muted">Jan 2021 — May 2021</span>
+                <p>Built full-stack projects and shipped them to production.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 05 TOOLING -->
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">05 / Tooling</span>
+          <h2>The stack I reach for</h2>
+          <p>Proven tools for the foundations, so the novelty budget goes where users can feel it.</p>
+        </div>
+        <div class="cards cards-3">
+          <div class="stack reveal"><span class="mono muted">where users feel it</span><h3>Frontend</h3>
+            <ul><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>Web Workers</li></ul></div>
+          <div class="stack reveal"><span class="mono muted">in their pocket</span><h3>Mobile</h3>
+            <ul><li>React Native</li><li>Expo</li><li>Firebase</li><li>Push notifications</li></ul></div>
+          <div class="stack reveal"><span class="mono muted">the quiet part</span><h3>Backend</h3>
+            <ul><li>Node.js</li><li>Express</li><li>Spring Boot</li><li>REST APIs</li></ul></div>
+          <div class="stack reveal"><span class="mono muted">the source of truth</span><h3>Data</h3>
+            <ul><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li></ul></div>
+          <div class="stack reveal"><span class="mono muted">the new frontier</span><h3>AI</h3>
+            <ul><li>Agentic workflows</li><li>Model Context Protocol</li><li>LLM evaluation</li></ul></div>
+          <div class="stack reveal"><span class="mono muted">did it work?</span><h3>Product &amp; growth</h3>
+            <ul><li>Mixpanel</li><li>Analytics</li><li>A/B testing</li><li>SEO</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 WRITING -->
+    <section class="section" id="writing">
+      <div class="container">
+        <div class="section-head section-head-row reveal">
+          <div>
+            <span class="eyebrow mono">06 / Writing</span>
+            <h2>Notes from the build</h2>
+            <p>Write-ups of real problems — what broke, what I tried, and what I'd do again.</p>
+          </div>
+          <a class="link mono" href="#writing">all posts →</a>
+        </div>
+        <div class="posts">
+          <a class="post post-latest reveal" href="#writing">
+            <span class="mono muted"><span class="badge">Latest</span> Oct 2026 · 6 min read</span>
+            <h3>How I build complete products with AI coding agents</h3>
+            <p>One product brief, one progress tracker, and a build that moves one validated phase at a time.</p>
+            <span class="chips"><span>ai</span><span>workflow</span></span>
+          </a>
+          <a class="post reveal" href="#writing">
+            <span class="mono muted">Mar 2026 · backend · 4 min read</span>
+            <h3>Designing an event-driven notification system</h3>
+            <p>Why the event vocabulary mattered more than the push provider.</p>
+          </a>
+          <a class="post reveal" href="#writing">
+            <span class="mono muted">Nov 2025 · frontend · 3 min read</span>
+            <h3>Keep the main thread boring</h3>
+            <p>Fixing a frozen dashboard by moving heavy work into a web worker.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 TESTIMONIALS -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">07 / Kind words</span>
+          <h2>What people I've worked with say</h2>
+        </div>
+        <div class="carousel reveal">
+          <div class="slides" id="slides">
+            <figure class="slide">
+              <p class="pull">…delivered quickly and with great attention to detail.</p>
+              <blockquote>“Replace this with a real recommendation. Describe how they helped the team, the quality of their work and what made them stand out.”</blockquote>
+              <figcaption><span class="avatar">JD</span><div><strong>Jane Doe</strong><span class="muted">Engineering Manager · Company One</span></div></figcaption>
+            </figure>
+            <figure class="slide">
+              <p class="pull">…a calm, supportive leader and a strong engineer.</p>
+              <blockquote>“Another testimonial goes here. Keep it authentic — pull quotes from LinkedIn recommendations work well.”</blockquote>
+              <figcaption><span class="avatar">JS</span><div><strong>John Smith</strong><span class="muted">SDE · Company Two</span></div></figcaption>
+            </figure>
+            <figure class="slide">
+              <p class="pull">…always ready to take on the hardest problem.</p>
+              <blockquote>“A third testimonial. Mention a specific project or trait so it feels concrete.”</blockquote>
+              <figcaption><span class="avatar">AK</span><div><strong>Alex Kim</strong><span class="muted">Product Manager · Company Two</span></div></figcaption>
+            </figure>
+          </div>
+          <div class="carousel-controls">
+            <button class="icon-btn" id="prevSlide" aria-label="Previous testimonial">←</button>
+            <span class="mono" id="slideCount">01 / 03</span>
+            <button class="icon-btn" id="nextSlide" aria-label="Next testimonial">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow mono">08 / Say hello</span>
+          <h2>Got an idea that should be a <em>product</em>?</h2>
+          <p>Always up for a good product conversation — a role, a collaboration, or just comparing notes on shipping.</p>
+          <ul class="contact-meta">
+            <li><span class="mono muted">Local time</span><span id="localTime">—</span></li>
+            <li><span class="mono muted">Status</span><span><span class="dot"></span> Open to interesting conversations</span></li>
+            <li><span class="mono muted">Elsewhere</span>
+              <span><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp; <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></span></li>
+          </ul>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <label>Name<input type="text" name="name" required maxlength="100" autocomplete="name" /></label>
+          <label>Email<input type="email" name="email" required maxlength="200" autocomplete="email" /></label>
+          <label>Message<textarea name="message" rows="5" required maxlength="2000"></textarea></label>
+          <button class="btn" type="submit">Send message →</button>
+          <p class="muted small" id="formNote">I usually reply within a couple of days.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="logo">muzammil<span class="accent">.</span></a>
+        <p class="muted">Software Engineer · India. Turning ideas into scalable products.</p>
+      </div>
+      <div><h4 class="mono">Site</h4><a href="#top">Home</a><a href="#work">Work</a><a href="#experience">About</a><a href="#writing">Writing</a><a href="#contact">Contact</a></div>
+      <div><h4 class="mono">Connect</h4><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+      <div><h4 class="mono">Contact</h4><a href="#contact">Send a message</a><a href="mailto:you@example.com">you@example.com</a><a href="resume.pdf" target="_blank" rel="noopener">Résumé PDF</a></div>
+    </div>
+    <div class="container footer-bottom mono muted">
+      <span>© <span id="year"></span> Muzammil</span>
+      <a href="#top">back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

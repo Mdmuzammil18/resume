@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohammed Muzammil — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ===== UAE-standard resume · refined edition ===== */
+  :root {
+    --ink: #10151f;
+    --body: #3a4253;
+    --muted: #7a8396;
+    --line: #e9ebf0;
+    --accent: #15694a;        /* refined forest green */
+    --accent-2: #2a9d6f;
+    --accent-soft: #edf5f1;
+    --gold: #c89b3c;
+    --sidebar-1: #0c251c;
+    --sidebar-2: #113a2a;
+    --sidebar-ink: #f1f5f3;
+    --sidebar-muted: #9db6ab;
+    --paper: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #4a4f55; }
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--body);
+    line-height: 1.5;
+    font-size: 10.3px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  .page {
+    position: relative;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 16px auto;
+    background: var(--paper);
+    display: grid;
+    grid-template-columns: 70mm 1fr;
+    box-shadow: 0 10px 40px rgba(0,0,0,.4);
+    overflow: hidden;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar {
+    position: relative;
+    background: linear-gradient(170deg, var(--sidebar-2) 0%, var(--sidebar-1) 100%);
+    color: var(--sidebar-ink);
+    padding-bottom: 22px;
+  }
+  .sidebar::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(120px 120px at 85% 8%, rgba(42,157,111,.25), transparent 70%),
+      radial-gradient(160px 160px at 10% 100%, rgba(42,157,111,.15), transparent 70%);
+    pointer-events: none;
+  }
+  .photo-wrap { padding: 26px 22px 20px; text-align: center; position: relative; }
+  .photo-ring {
+    width: 128px; height: 128px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(145deg, var(--accent-2), rgba(255,255,255,.3));
+    box-shadow: 0 8px 22px rgba(0,0,0,.35);
+  }
+  .photo {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(12,37,28,.9);
+    display: block;
+  }
+
+  .side-section { padding: 0 22px; margin-top: 18px; position: relative; }
+  .side-h {
+    font-size: 9.5px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #7fe0b1;
+    font-weight: 700;
+    margin-bottom: 11px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .side-h svg { width: 12px; height: 12px; flex: none; }
+  .side-h::after { content: ""; flex: 1; height: 1px; background: rgba(255,255,255,.12); }
+
+  .side-row { margin-bottom: 9px; }
+  .side-row .k {
+    display: block; font-size: 8px; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--sidebar-muted); margin-bottom: 1px;
+  }
+  .side-row .v { color: var(--sidebar-ink); font-size: 9.8px; word-break: break-word; line-height: 1.35; }
+  .side-row .v a:hover { color: #bfe9d2; }
+  .ph { color: var(--gold); font-style: italic; }
+
+  .skill-group { margin-bottom: 11px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .sg-title { font-size: 8.4px; letter-spacing: .06em; text-transform: uppercase; color: #7fe0b1; font-weight: 600; margin-bottom: 5px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .chip {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.13);
+    color: var(--sidebar-ink);
+    border-radius: 6px;
+    padding: 2.5px 7px;
+    font-size: 8.5px;
+    font-weight: 500;
+  }
+
+  .lang-row { margin-bottom: 8px; }
+  .lang-row .lt { display: flex; justify-content: space-between; font-size: 9.3px; margin-bottom: 3px; }
+  .lang-row .lvl { color: var(--sidebar-muted); font-size: 8.3px; }
+  .bar { height: 3px; background: rgba(255,255,255,.12); border-radius: 3px; overflow: hidden; }
+  .bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent-2), #7fe0b1); border-radius: 3px; }
+
+  .cert-item { margin-bottom: 7px; }
+  .cert-item .ct { color: var(--sidebar-ink); font-size: 9.6px; font-weight: 500; }
+  .cert-item .cm { color: var(--sidebar-muted); font-size: 8.4px; }
+
+  /* ---------- Main ---------- */
+  .main { padding: 30px 30px 26px; position: relative; }
+  .head-name { font-family: "Fraunces", serif; font-size: 31px; font-weight: 600; letter-spacing: -.5px; color: var(--ink); line-height: 1.02; }
+  .head-role {
+    margin-top: 6px; font-size: 11px; font-weight: 600; color: var(--accent);
+    text-transform: uppercase; letter-spacing: .22em;
+  }
+  .head-rule { height: 3px; width: 54px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 3px; margin: 14px 0 18px; }
+
+  .section { margin-bottom: 17px; }
+  .section:last-child { margin-bottom: 0; }
+  .sec-h {
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink); font-weight: 700; margin-bottom: 11px;
+    display: flex; align-items: center; gap: 9px;
+  }
+  .sec-h .ico {
+    width: 20px; height: 20px; flex: none; border-radius: 6px;
+    background: var(--accent-soft); color: var(--accent);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .sec-h .ico svg { width: 12px; height: 12px; }
+  .sec-h::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .summary { color: var(--body); font-size: 10.1px; text-align: justify; }
+
+  .timeline { position: relative; padding-left: 16px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 4px; top: 4px; bottom: 4px;
+    width: 1.5px; background: linear-gradient(var(--accent-2), var(--line));
+  }
+  .job { position: relative; margin-bottom: 12px; }
+  .job:last-child { margin-bottom: 0; }
+  .job::before {
+    content: ""; position: absolute; left: -15.5px; top: 3px;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--paper); border: 2px solid var(--accent);
+  }
+  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .job-title { font-weight: 700; font-size: 10.6px; color: var(--ink); }
+  .job-co { color: var(--accent); font-weight: 600; }
+  .job-date {
+    white-space: nowrap; font-size: 8.4px; color: var(--accent);
+    background: var(--accent-soft); border-radius: 20px; padding: 2px 9px; font-weight: 600;
+  }
+  ul.bullets { list-style: none; margin-top: 5px; }
+  ul.bullets li {
+    position: relative; padding-left: 13px; margin-bottom: 3.5px;
+    color: var(--body); font-size: 9.7px; text-align: justify;
+  }
+  ul.bullets li::before {
+    content: ""; position: absolute; left: 1px; top: 5.5px;
+    width: 4px; height: 4px; background: var(--accent-2);
+    border-radius: 1px; transform: rotate(45deg);
+  }
+
+  .edu-card {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    background: var(--accent-soft); border: 1px solid #dcebe3;
+    border-radius: 10px; padding: 11px 14px;
+  }
+  .edu-card .deg { font-weight: 700; color: var(--ink); font-size: 10.4px; }
+  .edu-card .inst { color: var(--muted); font-size: 9.4px; margin-top: 1px; }
+  .edu-card .edu-date { white-space: nowrap; font-size: 8.6px; color: var(--accent); font-weight: 600; }
+
+  .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .proj {
+    border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+    background: #fcfdfc;
+  }
+  .proj .pt { font-weight: 700; color: var(--ink); font-size: 10px; margin-bottom: 3px; display: flex; align-items: center; gap: 6px; }
+  .proj .pt .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex: none; }
+  .proj p { font-size: 9.2px; color: var(--body); text-align: justify; }
+
+  /* ---------- Helper note (screen only) ---------- */
+  .note {
+    max-width: 210mm; margin: 0 auto 10px;
+    color: #eef1f0; font-size: 12px;
+    background: #2b2f34; border: 1px solid #40454c;
+    border-radius: 10px; padding: 13px 16px;
+  }
+  .note b { color: var(--gold); }
+  .note code { color: #7fe0b1; background: rgba(0,0,0,.25); padding: 1px 5px; border-radius: 4px; }
+
+  @page { size: A4; margin: 0; }
+  @media print {
+    html, body { background: #fff; }
+    .note { display: none; }
+    .page { margin: 0; box-shadow: none; }
+    .job, .proj, .edu-card { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="note">
+  <b>Save as PDF →</b> open in Chrome · Print (⌘P / Ctrl+P) · Destination “Save as PDF” · Margins <b>None</b> · <b>Background graphics ON</b> · save as <code>resume.pdf</code>.
+  Italic <span class="ph">gold</span> text = UAE placeholders to replace before applying.
+</div>
+
+<div class="page">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <div class="photo-wrap">
+      <div class="photo-ring">
+        <img class="photo" src="resume%20image.png" alt="Mohammed Muzammil" />
+      </div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-h">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Contact
+      </div>
+      <div class="side-row"><span class="k">Phone</span><span class="v">+91 96638 08429</span></div>
+      <div class="side-row"><span class="k">Email</span><span class="v"><a href="mailto:muzammilftx@gmail.com">muzammilftx@gmail.com</a></span></div>
+      <div class="side-row"><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/mdmuzammil911/">linkedin.com/in/mdmuzammil911</a></span></div>
+      <div class="side-row"><span class="k">GitHub</span><span class="v"><a href="https://github.com/mdmuzammil18/">github.com/mdmuzammil18</a></span></div>
+      <div class="side-row"><span class="k">Location</span><span class="v">Bengaluru, India<br/><span class="ph">Open to relocate — UAE</span></span></div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-h">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Personal
+      </div>
+      <div class="side-row"><span class="k">Nationality</span><span class="v">Indian</span></div>
+      <div class="side-row"><span class="k">Date of Birth</span><span class="v ph">DD / MM / YYYY</span></div>
+      <div class="side-row"><span class="k">Visa Status</span><span class="v ph">Visit / On request</span></div>
+      <div class="side-row"><span class="k">Marital Status</span><span class="v ph">Single / Married</span></div>
+      <div class="side-row"><span class="k">Driving Licence</span><span class="v ph">Indian / UAE / —</span></div>
+      <div class="side-row"><span class="k">Notice Period</span><span class="v ph">Immediate / 30 days</span></div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-h">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+        Languages
+      </div>
+      <div class="lang-row"><div class="lt"><span>English</span><span class="lvl">Professional</span></div><div class="bar"><span style="width:88%"></span></div></div>
+      <div class="lang-row"><div class="lt"><span>Hindi</span><span class="lvl">Native</span></div><div class="bar"><span style="width:100%"></span></div></div>
+      <div class="lang-row"><div class="lt"><span>Urdu</span><span class="lvl">Native</span></div><div class="bar"><span style="width:100%"></span></div></div>
+      <div class="lang-row"><div class="lt"><span class="ph">Arabic</span><span class="lvl ph">Basic · edit</span></div><div class="bar"><span style="width:30%"></span></div></div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-h">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+        Technical Skills
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">Languages</div>
+        <div class="chips"><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">LangChain.js</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">Frameworks</div>
+        <div class="chips"><span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">Redux</span><span class="chip">Redux-Saga</span><span class="chip">Tailwind</span><span class="chip">Jest</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">AI / LLM</div>
+        <div class="chips"><span class="chip">OpenAI API</span><span class="chip">RAG</span><span class="chip">Pinecone</span><span class="chip">Prompt Eng.</span></div>
+      </div>
+      <div class="skill-group">
+        <div class="sg-title">Cloud &amp; Tools</div>
+        <div class="chips"><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Microservices</span><span class="chip">REST APIs</span><span class="chip">Redis</span><span class="chip">Git</span><span class="chip">CI/CD</span></div>
+      </div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-h">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        Certifications
+      </div>
+      <div class="cert-item"><div class="ct">LangChain.js Certification</div><div class="cm">LangChain · 2025</div></div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <div class="head-name">Mohammed Muzammil</div>
+    <div class="head-role">Senior Software Engineer</div>
+    <div class="head-rule"></div>
+
+    <div class="section">
+      <div class="sec-h">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+        Profile
+      </div>
+      <p class="summary">
+        Senior Software Engineer with 6+ years of experience designing and shipping production-grade,
+        full-stack web and mobile applications with React.js, Next.js, TypeScript and Node.js. Proven
+        record of taking products from a blank page to the App Store and Google Play — as a founding
+        engineer and co-founder of multiple live ventures. Specialised in AI-driven products: agentic
+        workflows, RAG pipelines and LLM tooling built with the OpenAI API, vector databases (Pinecone)
+        and the Vercel AI SDK. Strong across the stack — scalable REST and event-driven backends, secure
+        authentication (JWT &amp; RBAC), Redis caching and NoSQL data models — with hands-on AWS (EKS,
+        Lambda, S3) and CI/CD delivery. Driven by clean architecture, performance and building software
+        people actually use.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="sec-h">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        Work Experience
+      </div>
+
+      <div class="timeline">
+        <div class="job">
+          <div class="job-top">
+            <div><span class="job-title">Senior Consultant</span> · <span class="job-co">Emids Technologies</span></div>
+            <div class="job-date">Dec 2025 – Present</div>
+          </div>
+          <ul class="bullets">
+            <li>Built a full-stack expense tracker with an embedded AI chat assistant, letting users query spending in natural language for real-time, contextual insights.</li>
+            <li>Designed a RAG conversational pipeline with the OpenAI API and Pinecone vector DB, indexing transaction data for accurate, context-aware answers.</li>
+            <li>Engineered a multi-agent orchestration system that autonomously coordinated flight bookings, calendar scheduling and procurement — planning tasks, invoking tools and handing off to humans for approval.</li>
+            <li>Developed Node.js REST APIs connecting the assistant to data — query parsing, retrieval and response generation.</li>
+            <li>Optimised data-fetching with caching, cutting redundant requests ~30% and improving load times ~40%.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-top">
+            <div><span class="job-title">AI Full-Stack Developer</span> · <span class="job-co">KPMG (KDN AI)</span></div>
+            <div class="job-date">Jun 2025 – Oct 2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Built an interactive chat-driven knowledge-graph interface using the Vercel AI SDK, React.js, Redux-Saga and TypeScript to query and visualise document insights.</li>
+            <li>Developed Node.js APIs and Azure Functions to process document chunks with LLMs, building real-time graphs with Reagraph over Redis and NoSQL stores.</li>
+            <li>Integrated an LLM-powered assistant to interpret queries and return graph-based insights via secure REST APIs.</li>
+            <li>Delivered a full-stack RAG architecture with AWS (EKS) deployment pipelines and automated Jest testing.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-top">
+            <div><span class="job-title">Founding Engineer &amp; Sr. Developer</span> · <span class="job-co">Yalla Hajji</span></div>
+            <div class="job-date">Mar 2024 – Jun 2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Built the Yalla Hajji SaaS marketplace from scratch and shipped it across web, iOS and Android — published and live on the Apple App Store and Google Play.</li>
+            <li>Engineered a scalable multi-tenant backend (Node.js, REST, Redis, Firebase) with secure JWT &amp; RBAC auth, plus React.js/TypeScript dashboards for booking, payments and analytics.</li>
+            <li>Developed React Native &amp; Expo mobile apps owning the full release pipeline, integrated secure payments and AI package recommendations, and managed AWS (EKS) and CI/CD deployments.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-top">
+            <div><span class="job-title">Senior Software Developer</span> · <span class="job-co">Immensitas (formerly Lemnisk)</span></div>
+            <div class="job-date">Jul 2021 – Mar 2024</div>
+          </div>
+          <ul class="bullets">
+            <li>Maintained and enhanced the Customer Data Platform (CDP) UI with React.js, Redux-Saga and TypeScript, improving performance and stability.</li>
+            <li>Built Node.js automation tools to streamline client onboarding, integrating Redis caching, NoSQL config and REST services.</li>
+            <li>Leveraged AWS (S3, Lambda, CloudWatch, API Gateway) and CI/CD for scalable deployments and monitoring.</li>
+            <li>Refactored legacy codebases for type-safety and maintainability with linting, Prettier and Jest coverage.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-top">
+            <div><span class="job-title">Software Developer</span> · <span class="job-co">Lemnisk</span></div>
+            <div class="job-date">Dec 2020 – Jun 2021</div>
+          </div>
+          <ul class="bullets">
+            <li>Built reusable JavaScript/TypeScript SDKs integrating with client websites, improving data accuracy and reducing manual setup.</li>
+            <li>Collaborated cross-functionally on frontend tracking aligned with Node.js analytics and REST specs.</li>
+            <li>Authored technical docs and internal wikis, improving onboarding and Jest test reliability.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-h">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+        Education
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="deg">B.Tech, Mechanical Engineering</div>
+          <div class="inst">HKBK College of Engineering, Bengaluru · CGPA 6.19</div>
+        </div>
+        <div class="edu-date">2015 – 2019</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-h">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span>
+        Key Projects
+      </div>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="pt"><span class="dot"></span>AI Dev Workflow · Jira + Figma → Code</div>
+          <p>VS Code-integrated workflow that pulls Jira tickets and Figma specs via API and uses an LLM to generate frontend code in-editor, streamlining design-to-dev handoff.</p>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="dot"></span>Automated Trading EAs</div>
+          <p>Expert Advisors in MQL4/MQL5 for MetaTrader, implementing rule-based strategies for trade entry, exit and risk management.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sec-h">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></span>
+        Side Projects
+      </div>
+      <div class="proj-grid">
+        <div class="proj">
+          <div class="pt"><span class="dot"></span>HaniGo · Co-founder · hanigo.in</div>
+          <p>Hyperlocal food &amp; grocery delivery marketplace with zero platform fee — built and shipped across web, iOS and Android, live on the App Store and Google Play.</p>
+        </div>
+        <div class="proj">
+          <div class="pt"><span class="dot"></span>Labbyk · Co-founder · labbyk.in</div>
+          <p>SaaS website builder for Umrah &amp; Hajj agencies to launch a professional site in minutes — self-serve onboarding, templates and payments.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
