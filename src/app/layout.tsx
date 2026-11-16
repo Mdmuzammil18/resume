@@ -15,7 +15,7 @@ const serif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://www.muzzamil.in"),
   title: {
     default: "Muzammil — Software Engineer",
     template: "%s · Muzammil",
